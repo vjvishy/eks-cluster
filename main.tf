@@ -1,3 +1,7 @@
+provider "aws" {
+  region = data.terraform_remote_state.aws_resources.outputs.region
+}
+
 data "terraform_remote_state" "aws_resources" {
   backend = "local"
  
